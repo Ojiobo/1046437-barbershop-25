@@ -40,10 +40,10 @@
         <img class="page-logo__img" src="img/index-logo.svg" width="368" height="153" alt="Логотип барбершопа &laquo;Бородинский&raquo;">
       </a>
 
-      <h1 class="title title--hidden">Барбершоп "Бородинский"</h1>
+      <h1 class="visually-hidden">Барбершоп "Бородинский"</h1>
 
       <section class="benefits">
-        <h2 class="title title--hidden">Преимущества</h2>
+        <h2 class="visually-hidden">Преимущества</h2>
         <ul class="benefits__list">
           <li class="benefits__item">
             <h3 class="benefits__title">Быстро</h3>
@@ -106,24 +106,20 @@
 
         <p class="appointment__info">Укажите желаемую дату и&nbsp;время и&nbsp;мы&nbsp;свяжемся с&nbsp;вами для подтверждения брони</p>
 
-        <form class="appointment__form" action="https://echo.htmlacademy.ru" method="post" aria-label="Форма для бронирования времени">
-          <label class="appointment__label">
-            Дата
-            <input class="appointment__input appointment-input__date" type="text" name="appointment-date" placeholder="08.10.2017">
-          </label><br>
-          <label class="appointment__label">
-            Время
-            <input class="appointment__input appointment-input__time" type="text" name="appointment-time" placeholder="10:00">
-          </label><br>
-          <label class="appointment__label">
-            Ваше имя
-            <input class="appointment__input appointment-input__name" type="text" name="appointment-name" placeholder="Борода">
-          </label><br>
-          <label class="appointment__label">
-            Телефон
-            <input class="appointment__input appointment-input__phone" type="text" name="appointment-phone" placeholder="+7 123 456-78-90">
-          </label><br>
-          <button type="submit">Отправить</button>
+        <form class="appointment__form appointment-form" action="https://echo.htmlacademy.ru" method="post" aria-label="Форма для бронирования времени">
+          <label class="appointment-form__label appointment-label__date" for="appointment-date">Дата</label>
+          <input class="appointment-form__input appointment-input__date" type="text" name="appointment-date" id="appointment-date" placeholder="08.10.2017"><br>
+
+          <label class="appointment-form__label appointment-label__time" for="appointment-time">Время</label>
+          <input class="appointment-form__input appointment-input__time" type="text" name="appointment-time" id="appointment-time" placeholder="10:00"><br>
+
+          <label class="appointment-form__label appointment-label__name" for="appointment-name">Ваше имя</label>
+          <input class="appointment-form__input appointment-input__name" type="text" name="appointment-name" id="appointment-name" placeholder="Борода"><br>
+
+          <label class="appointment-form__label appointment-label__phone" for="appointment-phone">Телефон</label>
+          <input class="appointment-form__input appointment-input__phone" type="text" name="appointment-phone" id="appointment-phone" placeholder="+7 123 456-78-90"><br>
+
+          <button class="btn appointment-form__btn" type="submit">Отправить</button>
         </form>			
       </section>
 
@@ -161,14 +157,20 @@
 
     <section class="modal modal-login">
       <h2 class="modal-login__title">Личный кабинет</h2>
+
       <p class="modal-login__text">Введите свой логин и&nbsp;пароль</p>
-      <!-- Здесь будет форма -->
-      <span class="modal-login__close">x</span>
+
+      <form>
+        
+      </form>
+
+      <button class="btn-close modal-login__close" type="button" aria-label="Кнопка - закрыть"></button>
     </section>
 
     <section class="modal-map">
-      <h2 class="title title--hidden">Как до нас добраться</h2>
-      <span class="modal-map__close">x</span>
+      <h2 class="visually-hidden">Как до нас добраться</h2>
+      <img src="img/map.jpg" width="780" height="574" alt="Расположение магазина Барбершоп Бородинский на карте">
+      <button class="btn-close modal-map__close" type="button" aria-label="Кнопка - закрыть"></button>
     </section>
   </body>
 </html>
