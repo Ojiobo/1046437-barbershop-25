@@ -56,7 +56,45 @@
 
       <section class="filters">
         <h2 class="visually-hidden">Фильтр товаров</h2>
-        <!-- Здесь будет форма -->
+        
+        <form class="filters__form" method="get" name="filters-form" action="https://echo.htmlacademy.ru">
+          <fieldset class="filters__fieldset manufacturers">
+            <legend class="filters__legend">Производители:</legend>
+
+            <input class="filters_input" type="checkbox" name="baxter-of-california" id="baxter-of-california" value="a1" checked>
+            <label class="filters__label" for="baxter-of-california">baxter of california</label>
+
+            <input class="filters_input" type="checkbox" name="mr-natty" id="mr-natty" value="a2">
+            <label class="filters__label" for="mr-natty">mr natty</label>
+            
+            <input class="filters_input" type="checkbox" name="suavecito" id="suavecito" value="a3" checked>
+            <label class="filters__label" for="suavecito">suavecito</label>
+            
+            <input class="filters_input" type="checkbox" name="malin-goetz" id="malin-goetz" value="a4">
+            <label class="filters__label" for="malin-goetz">malin+goetz</label>
+            
+            <input class="filters_input" type="checkbox" name="murray-s" id="murray-s" value="a5">
+            <label class="filters__label" for="murray-s">murray's</label>
+            
+            <input class="filters_input" type="checkbox" name="american-crew" id="american-crew" value="a6">
+            <label class="filters__label" for="american-crew">american crew</label>
+          </fieldset>
+
+          <fieldset class="filters__fieldset product-groups">
+            <legend class="filters__legend">Группы товаров:</legend>
+
+            <input class="filters_input" type="radio" name="product-groups" id="product-group1"  value="b1">
+            <label class="filters__label" for="product-group1">бритвенные принадлежности</label>
+
+            <input class="filters_input" type="radio" name="product-groups" id="product-group2" value="b2" checked>
+            <label class="filters__label" for="product-group2">средства для ухода</label>
+
+            <input class="filters_input" type="radio" name="product-groups" id="product-group3" value="b3">
+            <label class="filters__label" for="product-group3">аксессуары</label>
+          </fieldset>
+
+          <button class="btn filters__btn" type="submit" >Показать</button>
+        </form>
       </section>
 
       <section class="catalog">
@@ -221,9 +259,26 @@
 
     <section class="modal modal-login">
       <h2 class="modal-login__title">Личный кабинет</h2>
-      <p class="modal-login__text">Введите свой логин и пароль</p>
-      <!-- Здесь будет форма -->
-      <span class="modal-login__close">x</span>
+
+      <p class="modal-login__text">Введите свой логин и&nbsp;пароль</p>
+
+      <form class="modal-login__form modal-login-form" action="https://echo.htmlacademy.ru" method="post">
+        <label class="visually-hidden" for="modal-login">Логин</label>
+        <input class="modal-login-form__input" type="text" name="login" id="modal-login" placeholder="Логин"><br>
+
+        <label class="visually-hidden" for="modal-password">Пароль</label>
+        <input class="modal-login-form__input" type="text" name="password" id="modal-password" placeholder="Пароль"><br>
+
+        <p class="modal-login__info login-info">
+          <input class="login-info__input" type="checkbox" name="remember-me" id="checkbox-remember-me">
+          <label class="login-info__label" for="checkbox-remember-me">Запомните меня</label>
+          <a class="login-info__link" href="#">Я забыл пароль</a>
+        </p>
+
+        <button class="btn modal-login__enter" type="submit">Войти</button>
+      </form>
+
+      <button class="btn-close modal-login__close" type="button" aria-label="Кнопка - закрыть"></button>
     </section>
   </body>
 </html>
